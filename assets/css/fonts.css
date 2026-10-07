@@ -1,0 +1,42 @@
+/* Font aliases: the original site's font names mapped to bundled open-license fonts.
+   Raleway, Rubik, Poppins and Wix Madefor are the same fonts the original uses.
+   Proxima Nova, DIN Next, Avenir, Futura and Belinda are Wix-licensed; the closest
+   free equivalents are used instead (Red Hat Text, Barlow, Nunito Sans, Jost, Yellowtail). */
+@font-face{font-family:'raleway';src:url(../fonts/Raleway-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'raleway';src:url(../fonts/Raleway-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'raleway';src:url(../fonts/Raleway-400i.woff2) format('woff2');font-weight:100 500;font-style:italic;font-display:swap}
+@font-face{font-family:'raleway-semibold';src:url(../fonts/Raleway-600.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'raleway-semibold';src:url(../fonts/Raleway-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'rubik-v2';src:url(../fonts/Rubik-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'rubik-v2';src:url(../fonts/Rubik-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'rubik';src:url(../fonts/Rubik-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'rubik';src:url(../fonts/Rubik-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'proxima-n-w01-reg';size-adjust:97.5%;src:url(../fonts/RedHatText-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'proxima-n-w01-reg';size-adjust:93%;src:url(../fonts/RedHatText-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'proxima-n-w01-reg';size-adjust:97.5%;src:url(../fonts/RedHatText-400i.woff2) format('woff2');font-weight:100 500;font-style:italic;font-display:swap}
+@font-face{font-family:'din-next-w01-light';src:url(../fonts/Barlow-300.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'din-next-w01-light';src:url(../fonts/Barlow-400.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'belinda-w00-regular';src:url(../fonts/Yellowtail-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'belinda-w00-regular';src:url(../fonts/Yellowtail-400.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'poppins';src:url(../fonts/Poppins-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'poppins';src:url(../fonts/Poppins-400.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'poppins-extralight';src:url(../fonts/Poppins-200.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'poppins-extralight';src:url(../fonts/Poppins-400.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'futura-lt-w01-book';src:url(../fonts/Jost-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'futura-lt-w01-book';src:url(../fonts/Jost-400.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'avenir-lt-w01_35-light1475496';src:url(../fonts/NunitoSans-300.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'avenir-lt-w01_35-light1475496';src:url(../fonts/NunitoSans-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'madefor';src:url(../fonts/WixMadeforText-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'madefor';src:url(../fonts/WixMadeforText-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'madefor-text';src:url(../fonts/WixMadeforText-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'madefor-text';src:url(../fonts/WixMadeforText-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'wix-madefor-text-v2';src:url(../fonts/WixMadeforText-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'wix-madefor-text-v2';src:url(../fonts/WixMadeforText-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'madefor-display';src:url(../fonts/WixMadeforDisplay-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'madefor-display';src:url(../fonts/WixMadeforDisplay-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'wix-madefor-display-v2';src:url(../fonts/WixMadeforDisplay-400.woff2) format('woff2');font-weight:100 500;font-style:normal;font-display:swap}
+@font-face{font-family:'wix-madefor-display-v2';src:url(../fonts/WixMadeforDisplay-700.woff2) format('woff2');font-weight:600 900;font-style:normal;font-display:swap}
+@font-face{font-family:'helvetica-w01-roman';src:local('Helvetica Neue'),local('Helvetica'),local('Arial');font-weight:100 500}
+@font-face{font-family:'helvetica-w01-light';src:local('Helvetica Neue'),local('Helvetica'),local('Arial');font-weight:100 500}
+@font-face{font-family:'helvetica-bold';src:local('Helvetica Neue'),local('Helvetica'),local('Arial');font-weight:600 900}
+@font-face{font-family:'helvetica-w01-bold';src:local('Helvetica Neue'),local('Helvetica'),local('Arial');font-weight:600 900}
