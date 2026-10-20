@@ -278,6 +278,10 @@ button.sbtn-link { font: inherit; padding: 0; }
 /* ---------- repeaters (fluid columns) ---------- */
 .frep { display: flex; flex-wrap: wrap; column-gap: var(--hgap, 0); row-gap: var(--vgap, 0); width: 100%; }
 .frep > .wixui-repeater__item { flex: none; }
+/* classic repeaters: items spaced by --item-margin, list pulled back by the negative --margin-* */
+.wixui-repeater > [role="list"] { margin: var(--margin-top, 0) var(--margin-inline-end, 0) var(--margin-bottom, 0) var(--margin-inline-start, 0); }
+.wixui-repeater > [role="list"] > div { display: flex; flex-wrap: wrap; justify-content: var(--justify-content, flex-start); }
+.wixui-repeater > [role="list"] > div > [role="listitem"] { margin: var(--item-margin, 0); }
 
 /* ---------- product galleries (replace Wix Stores widget) ---------- */
 .storegal-host { height: auto !important; }
