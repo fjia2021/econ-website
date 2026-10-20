@@ -384,26 +384,37 @@ button.sbtn-link { font: inherit; padding: 0; }
 .vm #MENU_AS_CONTAINER { display: none; position: fixed; top: 0; bottom: 0; z-index: 1000; }
 .menu-open .vm #MENU_AS_CONTAINER { display: block; }
 .menu-open { overflow: hidden; }
+/* the toggle turns into the close (X) button above the open panel */
+.menu-open .vm #MENU_AS_CONTAINER_TOGGLE { z-index: 1001; }
+.menu-open .wixui-mobile-menu__icon > div > div > div:nth-child(odd) { left: -3px; width: calc(100% + 6px); }
 #overlay-MENU_AS_CONTAINER { position: absolute; inset: 0; background: rgba(var(--bg, 0,0,0), var(--alpha-bg, .6)); }
 #container-MENU_AS_CONTAINER { position: absolute; inset: 0; overflow-y: auto; }
 #inlineContentParent-MENU_AS_CONTAINER { position: relative; min-height: 100%; }
 .wixui-vertical-menu ul { list-style: none; margin: 0; padding: 0; }
 .wixui-vertical-menu__item { border-style: solid; border-color: rgba(var(--brd, var(--color_36)), var(--alpha-brd, 1));
   border-width: var(--brw, 0 0 1px 0); background: rgba(var(--bg, var(--color_13)), var(--alpha-bg, 1)); }
-.wixui-vertical-menu__item .wixui-vertical-menu__item { border-width: 0; background: rgba(var(--bgs, var(--color_11)), var(--alpha-bgs, 1)); }
-.wixui-vertical-menu .t-itemWrapper { display: flex; align-items: center; min-height: var(--item-height, 33px); }
-.wixui-vertical-menu .t-linkWrapper { flex: 1; order: 2; }
+.wixui-vertical-menu__item .wixui-vertical-menu__item { border-width: 0; background: transparent; }
+/* row = [arrow | label]; rows without a sub-menu let the label span both columns, as Wix does */
+.wixui-vertical-menu .t-itemWrapper { display: grid; grid-template-columns: var(--template-columns, calc(40px + 1em) 1fr);
+  grid-template-areas: var(--template-areas, "arrow label"); min-height: var(--item-height, 33px); }
+.wixui-vertical-menu .t-linkWrapper { grid-area: label; min-width: 0; }
+.wixui-vertical-menu .t-itemWrapper:not(:has(.t-expandablemenu-toggle)) .t-linkWrapper { grid-area: 1 / 1 / 2 / -1; }
 .wixui-vertical-menu__item-label { display: block; font: var(--fnt, normal normal normal 13px/1.4em rubik-v2, sans-serif);
-  color: rgb(var(--txt, var(--color_11))); padding-inline-start: var(--padding-start, 0); }
-.wixui-vertical-menu .t-expandablemenu-toggle { order: 1; width: calc(40px + 1em); align-self: stretch; border: 0; background: none;
-  cursor: pointer; position: relative; padding: 0; }
-.wixui-vertical-menu .t-expandablemenu-toggle::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px;
-  border: solid rgb(var(--arrowColor, var(--color_15))); border-width: 0 1.5px 1.5px 0; transform: translate(-50%, -70%) rotate(45deg); transition: transform .2s; }
-.wixui-vertical-menu__item.is-open > .t-itemWrapper .t-expandablemenu-toggle::before { transform: translate(-50%, -30%) rotate(-135deg); }
-.wixui-vertical-menu__item:not(:has(.t-expandablemenu-toggle)) > .t-itemWrapper .t-linkWrapper { padding-inline-start: calc(40px + 1em); }
+  line-height: var(--item-height, 33px); color: rgb(var(--txt, var(--color_11))); text-align: var(--text-align, start);
+  padding-inline-start: var(--padding-start, 0); padding-inline-end: var(--padding-end, 0); text-decoration: none; }
+.wixui-vertical-menu .t-expandablemenu-toggle { grid-area: arrow; display: flex; align-items: center; justify-content: flex-start;
+  border: 0; background: none; cursor: pointer; padding: 0 0 0 18px; }
+.wixui-vertical-menu__arrow { display: block; width: 12px; height: 11px; transition: transform .2s; }
+.wixui-vertical-menu__arrow svg { display: block; width: 12px; height: 6.33px; margin-top: 2.3px; fill: rgb(var(--arrowColor, var(--color_15))); }
+.wixui-vertical-menu__item.is-open > .t-itemWrapper .wixui-vertical-menu__arrow { transform: rotate(180deg); }
 .wixui-vertical-menu__submenu { display: none; }
 .wixui-vertical-menu__item.is-open > .wixui-vertical-menu__submenu { display: block; }
-.wixui-vertical-menu__submenu .wixui-vertical-menu__item-label { padding-inline-start: var(--sub-padding-start, 51px); }
+.wixui-vertical-menu__submenu .wixui-vertical-menu__item-label { font: var(--fntSubMenu, var(--fnt, normal normal normal 13px/1.4em rubik-v2, sans-serif));
+  line-height: var(--item-height, 33px); color: rgb(var(--txtexpanded, var(--txt, var(--color_11))));
+  padding-inline-start: var(--sub-padding-start, 51px); padding-inline-end: var(--sub-padding-end, 0); }
+/* current page (and the group that holds it) */
+.wixui-vertical-menu__item.is-selected > .t-itemWrapper .wixui-vertical-menu__item-label { color: rgb(var(--txts, var(--color_18))); }
+.wixui-vertical-menu__submenu .wixui-vertical-menu__item.is-selected > .t-itemWrapper .wixui-vertical-menu__item-label { color: rgb(var(--txtsSub, var(--txts, var(--color_18)))); }
 
 /* back-to-top button: hidden until the page is scrolled */
 #BACK_TO_TOP_BUTTON { opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s; cursor: pointer; z-index: 50; }

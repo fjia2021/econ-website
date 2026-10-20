@@ -60,6 +60,18 @@
   document.querySelectorAll('[id="overlay-MENU_AS_CONTAINER"]').forEach(function (o) {
     o.addEventListener('click', function () { body.classList.remove('menu-open'); });
   });
+  // Highlight the current page and its group, and open that group, as Wix does.
+  function norm(p) { return p.replace(/index\.html$/, '').replace(/\/?$/, '/'); }
+  var here = norm(location.pathname);
+  document.querySelectorAll('.wixui-vertical-menu__item-label[href]').forEach(function (a) {
+    if (norm(new URL(a.getAttribute('href'), location.href).pathname) !== here) return;
+    var li = a.closest('.wixui-vertical-menu__item');
+    li.setAttribute('aria-current', 'page');
+    for (var n = li; n; n = n.parentNode.closest('.wixui-vertical-menu__item')) {
+      n.classList.add('is-selected');
+      if (n !== li) n.classList.add('is-open');
+    }
+  });
   document.querySelectorAll('.t-expandablemenu-toggle').forEach(function (b) {
     b.addEventListener('click', function (e) {
       e.preventDefault();
